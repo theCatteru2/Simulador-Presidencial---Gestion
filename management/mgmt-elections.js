@@ -42,8 +42,8 @@ function runMidtermElection() {
     DISTRITOS_FEDERALES.forEach(dist => {
         let localBonus = rnd.float(-5.0, 5.0);
         if (dist.name.includes("Minero") && mgmt.flags.recursosEstatizados) localBonus += 4;
-        if (dist.name.includes("Metropolitano") && mgmt.alloc.transport >= 25) localBonus += 3;
-        if (dist.name.includes("Pampa") && mgmt.flags.cepoCambiario) localBonus -= 6;
+        if (dist.name.includes("Capital") && mgmt.alloc.transport >= 25) localBonus += 3;
+        if (dist.name.includes("del Campo") && mgmt.flags.cepoCambiario) localBonus -= 6;
         if (mgmt.provincialBondsActive) localBonus -= 5;
 
         const govDist = clamp(institutionalScore + localBonus, 10.0, 85.0);
