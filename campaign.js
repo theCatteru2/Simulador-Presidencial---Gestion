@@ -12,8 +12,8 @@ const rnd = {
 function money(v) { return '$' + Math.round(v).toLocaleString('es-AR'); }
 function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
-const creadorJuego = "Tiziano Michel Ferro";
-let nombreCandidato = "Guerrera";
+const creadorJuego = "Joirent";
+let nombreCandidato = "Candidata";
 
 let modoFacil = false;
 let factorEficacia = 1.0;
