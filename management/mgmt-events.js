@@ -263,7 +263,9 @@ function triggerContextualDecisionEvent() {
                     label: "Dejar flotar el tipo de cambio y preservar reservas",
                     sub: "No interviene en el mercado; devaluación moderada trasladada a precios.",
                     action: () => {
-                        mgmt.currency = clamp(mgmt.currency * 0.92, 0.04, 3.0);
+                        // Corrección: incrementa el valor de la divisa sin aplastarlo por clamp
+                        mgmt.currency = Math.max(1, mgmt.currency * 1.08);
+                        if (mgmt.parallelCurrency) mgmt.parallelCurrency = Math.max(1, mgmt.parallelCurrency * 1.06);
                         mgmt.inflation += 2.2;
                         mgmt.approval -= 1.5;
                         mgmt.lastAction = "Flotación cambiaria sin intervención.";
