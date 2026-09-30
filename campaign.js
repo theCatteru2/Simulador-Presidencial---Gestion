@@ -26,18 +26,18 @@ const PARTY_COLORS = {
 };
 
 const DISTRITOS_FEDERALES = [
-    { name: "Distrito Central 1", weight: 36 },
-    { name: "Distrito Norte 2", weight: 9 },
-    { name: "Distrito Litoral 3", weight: 8 },
-    { name: "Distrito Metropolitano 4", weight: 7 },
-    { name: "Distrito Andino 5", weight: 5 },
-    { name: "Distrito Valle 6", weight: 5 },
-    { name: "Distrito Ribera 7", weight: 4 },
-    { name: "Distrito Frontera 8", weight: 4 },
-    { name: "Distrito Minero 9", weight: 4 },
-    { name: "Distrito Austral 10", weight: 4 },
-    { name: "Distrito Pampa 11", weight: 3 },
-    { name: "Distrito Insular 12", weight: 2 }
+    { name: "Distrito Central", weight: 36 },
+    { name: "Distrito Norte", weight: 9 },
+    { name: "Distrito Oeste", weight: 8 },
+    { name: "Distrito Capital", weight: 7 },
+    { name: "Distrito Sur", weight: 5 },
+    { name: "Distrito del Valle", weight: 5 },
+    { name: "Distrito del Rio", weight: 4 },
+    { name: "Distrito Frontera", weight: 4 },
+    { name: "Distrito Minero", weight: 4 },
+    { name: "Distrito Austral", weight: 4 },
+    { name: "Distrito del Campo", weight: 3 },
+    { name: "Distrito Insular", weight: 2 }
 ];
 
 function showScreen(key) {
