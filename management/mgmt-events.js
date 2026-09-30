@@ -214,7 +214,7 @@ function showBimonthlyNewspaper(onContinue) {
     } else if (mgmt.approval > 60) {
         headlines.push(`👑 <strong>POPULARIDAD EN ALZA:</strong> Las encuestas otorgan un holgado ${mgmt.approval.toFixed(1)}% de imagen positiva.`);
     } else if (mgmt.approval < 25) {
-        headlines.push(`⚠️ <strong>DESCONTENTO GENERAL:</strong> La aprobación se hunde al ${mgmt.approval.toFixed(1)}% en medio de críticas de la oposición.`);
+        headlines.push(`⚠️️ <strong>DESCONTENTO GENERAL:</strong> La aprobación se hunde al ${mgmt.approval.toFixed(1)}% en medio de críticas de la oposición.`);
     } else {
         headlines.push(`🤝 <strong>PANORAMA SOCIAL:</strong> Tensión moderada en sindicatos y gobernaciones a la espera de nuevas medidas.`);
     }
@@ -263,7 +263,7 @@ function triggerContextualDecisionEvent() {
                     label: "Dejar flotar el tipo de cambio y preservar reservas",
                     sub: "No interviene en el mercado; devaluación moderada trasladada a precios.",
                     action: () => {
-                        // Corrección: incrementa el valor de la divisa sin aplastarlo por clamp
+                        // Corrección: incrementa el valor de la divisa proporcionalmente sin clamp a 3
                         mgmt.currency = Math.max(1, mgmt.currency * 1.08);
                         if (mgmt.parallelCurrency) mgmt.parallelCurrency = Math.max(1, mgmt.parallelCurrency * 1.06);
                         mgmt.inflation += 2.2;
