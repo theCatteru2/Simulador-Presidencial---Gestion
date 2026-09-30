@@ -186,7 +186,7 @@ function renderManagement() {
     const barApp = document.getElementById('bar-mgmt-approval');
     if (barApp) barApp.style.width = `${Math.min(100, Math.max(0, mgmt.approval))}%`;
 
-    // Formato dinámico para evitar que muestre $0 al bajar de la unidad
+    // Formato dinámico para evitar que muestre $0
     const formatCurrencyVal = (val) => {
         if (!val || val <= 0) return "0.01";
         if (val < 10) return val.toFixed(2);
