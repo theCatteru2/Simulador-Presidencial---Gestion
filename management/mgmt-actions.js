@@ -123,7 +123,6 @@ function openManualDevaluationModal() {
 function openCurrencyReconversionModal() {
     if (!mgmt) return;
 
-    // Formato dinámico para el texto interno del modal
     const formatCurrencyVal = (val) => {
         if (!val || val <= 0) return "0.01";
         if (val < 10) return val.toFixed(2);
